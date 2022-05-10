@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kodelabzz.Library", "Kodelabzz.Library\Kodelabzz.Library.csproj", "{4C4BA64B-5A6D-4DB1-A295-1912A2277D08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kodelabzz.Console", "Kodelabzz.Console\Kodelabzz.Console.csproj", "{676F6B7E-ED21-4F6B-8A1B-965C0F9E29B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C4BA64B-5A6D-4DB1-A295-1912A2277D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C4BA64B-5A6D-4DB1-A295-1912A2277D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C4BA64B-5A6D-4DB1-A295-1912A2277D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C4BA64B-5A6D-4DB1-A295-1912A2277D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{676F6B7E-ED21-4F6B-8A1B-965C0F9E29B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{676F6B7E-ED21-4F6B-8A1B-965C0F9E29B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{676F6B7E-ED21-4F6B-8A1B-965C0F9E29B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{676F6B7E-ED21-4F6B-8A1B-965C0F9E29B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D87434A-61B3-4269-B7AB-E8E6043B7D8B}
+	EndGlobalSection
+EndGlobal
