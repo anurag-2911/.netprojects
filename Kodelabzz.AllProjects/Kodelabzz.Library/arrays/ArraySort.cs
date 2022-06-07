@@ -4,6 +4,9 @@ namespace Kodelabzz.Library
 {
     public class ArraySort
     {
+        /// <summary>
+        /// Method to sort array by grouping them based on masterid
+        /// </summary>
         public static void Sort()
         {
             WorkSet parent = new WorkSet { MasterID = "123", MasterName = "master", CurrentId = "123" };
