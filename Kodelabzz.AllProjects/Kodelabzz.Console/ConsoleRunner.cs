@@ -4,18 +4,47 @@ using Kodelabzz.Library.programming;
 
 Console.WriteLine("Hello, World!");
 
-CreateObjects();
 
-static void CreateObjects()
+CallMethods();
+
+void CallMethods()
 {
-    int count = 0;
-    while(!Console.KeyAvailable)
-    { 
-        new Finalizers(count++);
-    }
+    CallDisposeTestMethods();
+
+    //CallFinalizersMethods();
+
+    //CallArraySort();
+
+    //CallFindUnique();
 }
 
-Console.WriteLine("terminating process");
+void CallDisposeTestMethods()
+{
+    Dispose_Test.Run();
+}
 
-//ArraySort.Sort();
-//CommonProgs.FindIfAllCharsAreUnique();
+void CallFinalizersMethods()
+{
+    CreateObjects();
+
+    static void CreateObjects()
+    {
+        int count = 0;
+        while (!Console.KeyAvailable)
+        {
+            _ = new Finalizers(count++);
+        }
+    }
+
+    Console.WriteLine("terminating process");
+}
+
+void CallArraySort()
+{
+    ArraySort.Sort();
+}
+
+void CallFindUnique()
+{
+    CommonProgs.FindIfAllCharsAreUnique();
+}

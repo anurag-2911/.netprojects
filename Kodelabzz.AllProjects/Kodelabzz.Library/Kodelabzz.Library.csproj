@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include=".net\Dispose_Test.cs" />
     <Compile Include=".net\Finalizers.cs" />
   </ItemGroup>
 
