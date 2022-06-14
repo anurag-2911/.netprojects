@@ -9,7 +9,7 @@ CallMethods();
 
 void CallMethods()
 {
-    CallDisposeTestMethods();
+    //CallDisposeTestMethods();
 
     //CallFinalizersMethods();
 
