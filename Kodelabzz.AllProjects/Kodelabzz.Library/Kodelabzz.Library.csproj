@@ -10,6 +10,7 @@
     <Compile Include=".net\BoxUnBox.cs" />
     <Compile Include=".net\Dispose_Test.cs" />
     <Compile Include=".net\Finalizers.cs" />
+    <Compile Include=".net\StringConcat.cs" />
   </ItemGroup>
 
 </Project>

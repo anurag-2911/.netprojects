@@ -17,7 +17,9 @@ void CallMethods()
 
     //CallFindUnique();
 
-    BoxUnBox.Run();
+    //BoxUnBox.Run();
+
+    //StringConcat.Run();
 }
 
 void CallDisposeTestMethods()
