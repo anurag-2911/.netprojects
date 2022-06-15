@@ -16,6 +16,8 @@ void CallMethods()
     //CallArraySort();
 
     //CallFindUnique();
+
+    BoxUnBox.Run();
 }
 
 void CallDisposeTestMethods()
