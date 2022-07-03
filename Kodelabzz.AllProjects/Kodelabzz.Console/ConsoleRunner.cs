@@ -20,8 +20,10 @@ void CallMethods()
     //BoxUnBox.Run();
 
     //StringConcat.Run();
-    int[] arr = { 1, 3, 6, 4, 1, 2 };
-    int retVal = solution(arr);
+    //int[] arr = { 1, 3, 6, 4, 1, 2 };
+    //int retVal = solution(arr);
+
+    MThreads.Start();
 
 }
 
