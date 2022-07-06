@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Kodelabzz.Library.ds;
 
 namespace Kodelabzz.Library
 {
@@ -10,7 +6,45 @@ namespace Kodelabzz.Library
     {
         public static void Run()
         {
+            LinkedListOperations();
+        }
 
+        private static void LinkedListOperations()
+        {
+            XLinkedList linkedList = new();
+            XNode node = new()
+            {
+                data = 123
+            };
+            linkedList.Add(node);
+            XNode node1 = new()
+            {
+                data = 2
+            };
+            linkedList.Add(node1);
+            XNode node2 = new()
+            {
+                data = 45
+            };
+            linkedList.Add(node2);
+            XNode node3 = new()
+            {
+                data = 9
+            };
+            linkedList.Add(node3);
+
+            linkedList.Display();
+
+            bool search = linkedList.Search(9);
+
+
+            Console.WriteLine("item present ? " + search);
+
+            bool isDeleted = linkedList.Delete(91);
+
+            linkedList.Display();
         }
     }
+
+  
 }
