@@ -1,4 +1,5 @@
-﻿using Kodelabzz.Library.ds;
+﻿using Kodelabzz.Library.coursera;
+using Kodelabzz.Library.ds;
 
 namespace Kodelabzz.Library
 {
@@ -6,7 +7,9 @@ namespace Kodelabzz.Library
     {
         public static void Run()
         {
-            LinkedListOperations();
+            //LinkedListOperations();
+
+            BracketChecker.Main(null);
         }
 
         private static void LinkedListOperations()
