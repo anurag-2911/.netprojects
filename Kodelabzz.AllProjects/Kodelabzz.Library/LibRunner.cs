@@ -7,9 +7,7 @@ namespace Kodelabzz.Library
     {
         public static void Run()
         {
-            //LinkedListOperations();
-
-            BracketChecker.Main(null);
+           BracketChecker.Main(null);
         }
 
         private static void LinkedListOperations()

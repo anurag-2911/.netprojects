@@ -1,64 +1,76 @@
-﻿namespace Kodelabzz.Library.coursera
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace Kodelabzz.Library.coursera
 {
     public class BracketChecker
     {
         public static void Main(string[] args)
         {
-            string? input= Console.ReadLine();
+            string input= Console.ReadLine();
+
             BStack stack = new BStack();
+            
             if(input!=null)
             {
-                bool ismatched = true;
-                for (int i = 0; i < input.Length; i++)
+                int ismatched = 0;
+                int i;
+                for (i = 0;i < input.Length; i++)
                 {
                     Bracket goingIn;
                     if (input[i] == '[' || input[i] == '{' || input[i]=='(')
                     {
-                        goingIn = new Bracket(input[i], i);
+                        goingIn = new Bracket(input[i], i+1);
                         stack.Push(goingIn);
                     }
                     Bracket comingOut;
                     if(input[i] == ')' || input[i] == ']' || input[i] == '}')
                     {
                         comingOut = stack.Pop();
-                        ismatched = comingOut.IsMatched(input[i]);
-                        if(!ismatched)
+                        if (comingOut != null)
                         {
-                            Console.WriteLine();
+                            bool val = comingOut.IsMatched(input[i]);
+                            if (!val)
+                            {
+                                ismatched = -1;
+                                Console.WriteLine(i + 1);
+                                break;
+                            }
+                        }
+                        else
+                        {
+                            ismatched = -2;
                             break;
                         }
-
+                    }            
+                }
+                if (ismatched != -1)
+                {
+                    if (ismatched == -2)
+                    {
+                        Console.WriteLine(i + 1);
                     }
-                    if(ismatched && stack.IsEmpty())
+                    if (ismatched == 0 && stack.IsEmpty())
                     {
                         Console.WriteLine("Success");
                     }
                     else
                     {
-
+                        Bracket bracket = null;
+                        while (!stack.IsEmpty())
+                        {
+                            bracket = stack.Pop();
+                        }
+                        if (bracket != null)
+                        {
+                            Console.WriteLine(bracket.position);
+                        }
                     }
-
-                    
-
                 }
 
-                stack.Display();
-
-                for (int i = 0; i < input.Length; i++)
-                {
-                    Console.WriteLine(stack.Pop());
-                    stack.Display();
-                }
-
-                try
-                {
-                    stack.Pop();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    
-                }
+               
 
             }
 
@@ -66,8 +78,8 @@
     }
     internal class Bracket
     {
-        readonly char type;
-        readonly int position;
+       public readonly char type;
+       public readonly int position;
         public Bracket(char type, int position)
         {
             this.type = type;
@@ -95,7 +107,7 @@
         {
             if(counter == 0)
             {
-                throw new Exception("Stack is empty");
+                return null;
             }
             Bracket c= current.next.data;
             current.next = current.next.next;
