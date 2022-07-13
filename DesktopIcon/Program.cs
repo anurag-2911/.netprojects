@@ -241,12 +241,14 @@ namespace DesktopIcon
             foreach (var position in iconPositions)
             {
                 var iconIndex = _currentIconsOrder.IndexOf(position.Name);
-                if (iconIndex == -1)
-                { 
-                    continue; 
+                if (position.Name == "desk01")
+                {
+                    SendMessage(_desktopHandle, LVM_SETITEMPOSITION, iconIndex, MakeLParam(60, 812));
                 }
-
-                SendMessage(_desktopHandle, LVM_SETITEMPOSITION, iconIndex, MakeLParam(position.X+40, position.Y));
+                else
+                {
+                    SendMessage(_desktopHandle, LVM_SETITEMPOSITION, iconIndex, MakeLParam(position.X, position.Y));
+                }
             }
         }
         public static void Refresh()
